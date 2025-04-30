@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Registration</title>
+</head>
+
+<body>
+    <h1>Library Registration</h1>
+    <hr>
+    <form name="frmbook" action="register.php" method="POST">
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td><input type="text" name="txtID" required></td>
+            </tr>
+            <tr>
+                <td>Name Book:</td>
+                <td><input type="text" name="txtNameBook" required></td>
+            </tr>
+            <tr>
+                <td>Author:</td>
+                <td><input type="text" name="txtAuthor" required></td>
+            </tr>
+            <tr>
+                <td>Genre:</td>
+                <td>
+                    <input type="text" name="txtGenere" list="GenereList" required>
+                    <datalist id="GenereList">
+                        <option value="Horror">
+                        <option value="Fantasy">
+                        <option value="Comedy">
+                        <option value="Adventure">
+                        <option value="Romance">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>Year of Publication:</td>
+                <td><input type="text" name="txtYear" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="btnAcc" value="Accept"></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <p>This is a web page for registration of books in a library.<br>
+        Please fill in all the fields.<br>
+        Remember to save the information to keep our records updated.</p>
+</body>
+
+</html>
