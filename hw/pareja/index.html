@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Hotel Reservation</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="container">
+                <h2>
+                    Make a Reservation
+                </h2>
+                <div class="regForm">
+                    <form id="reservationForm" name="reservationForm" action="php/reserve.php" method="post">
+                        <table id="customerInfo">
+                            <tr>
+                                <td>Name: </td>
+                                <td><input type="text" id="name" name="name" placeholder="Ex: Mary Jane" required onchange="validateName()"/></td>
+                            </tr>
+                            <tr>
+                                <td>Email: </td>
+                                <td><input type="email" id="email" name="email" placeholder="Ex: maryjane@gmail.com" required onchange="validateMail()"/>
+                                </td>
+                            </tr>
+                            <td>Cellphone Number: </td>
+                                <td><input type="tel" id="phone" name="phone" required onchange="validatePhone()"/>
+                                </td>
+                            <tr>
+                                <td>Select the resort:</td>
+                                <td><select id="resort" name="resort" required>
+                                    <option value=""></option>
+                                    <option value="mompiche">Golden Beach Hotel - Mompiche</option>
+                                    <option value="salinas">Seagulls Hotel - Salinas</option>
+                                    <option value="pedernales">Aquamarine Hotel - Pedernales</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>Number of companions: </td>
+                                <td><input type="number" size="6" id="companions" name="companions" required min="0"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="dates">
+                            <tr>
+                                <td>Check-in Date<br/>
+                                    <input type="date" id="checkin" name="checkin" required onchange="validateCheckin(), enableCheckout()"/>
+                                </td>
+                                <td>Check-out Date<br/>
+                                    <input type="date" id="checkout" name="checkout" required disabled onchange="validateCheckout()"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p class="infoLabel">You have to enter a check-in date first in order to set the Check-out</p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="checkbox" id="info_mail" name="info_mail"/>
+                                    I would like to receive an email with information about hotel activities and tours.
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="Send" required id="submit_btn"/>
+                    </form>
+                </div>
+        </div>
+        <script src="javascript/validations.js"></script>
+    </body>
+</html>
