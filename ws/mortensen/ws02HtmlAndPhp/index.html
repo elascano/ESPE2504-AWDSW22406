@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Entry Form</title>
+</head>
+<body>
+    <h2>Computer Information Form</h2>
+    <form action="save_computers.php" method="post">
+        <p>serial number:</p>
+        <input type="number" name="serial_number" placeholder="Serial Number" required><br>
+        <p>operative_system:</p>
+        <select name="operative_system" required>
+            <option value="">Select OS</option>
+            <option value="Windows">Windows</option>
+            <option value="Linux">Linux</option>
+            <option value="macOS">macOS</option>
+        </select><br>
+        <p>price:</p>
+        <input type="number" step="0.01" name="price" placeholder="Price" required><br>
+        <p>model:</p>
+        <input type="text" name="model" placeholder="Model" maxlength="100" required><br>
+        <p>starting date:</p>
+        <input type="date" name="starting_date" required><br>
+        <p>brand:</p>
+        <input type="text" name="brand" placeholder="Brand" maxlength="50" required><br>
+        <p>Storage Space:</p>
+        <input type="text" name="storage_space" placeholder="Storage Space" maxlength="50" required><br>
+        <p>RAM:</p>
+        <input type="number" name="ram_memory" placeholder="RAM (GB)" required><br>
+        <p>CPU:</p>
+        <input type="text" name="microprocessor" placeholder="CPU" maxlength="100" required><br>
+        <p>GPU:</p>
+        <input type="text" name="graphic_card" placeholder="GPU" maxlength="50" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
