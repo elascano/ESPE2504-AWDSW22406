@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Computer Register</h1>
+    <form action="php/register.php" method="post">
+        <table>
+            <tr>
+                <td>Model:</td>
+                <td><input type="text" name="txtModel" id="txtModel" required></td>
+            </tr>
+            <tr>
+                <td>Brand:</td>
+                <td><input type="text" name="txtBrand" id="txtBrand" required></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="number" step="0.01" name="nmbPrice" id="nmbPrice" required></td>
+            </tr>
+            <tr>
+                <td>Amount:</td>
+                <td><input type="number" name="nmbAmount" id="nmbAmount" required></td>
+            </tr>
+            <tr>
+                <td>Acquisition Date:</td>
+                <td><input type="date" name="dtAcquisition" id="dtAcquisition" required></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select name="selState" id="selState" required>
+                        <option value="good">Good</option>
+                        <option value="bad">Bad</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Observations:</td>
+                <td><input type="text" name="txtObservations" id="txtObservations"></td>
+            </tr>
+            <tr>
+                <td>Provider:</td>
+                <td><input type="text" name="txtProvider" id="txtProvider" required></td>
+            </tr>
+            <tr>
+                <td>Sale Price:</td>
+                <td><input type="number" step="0.01" name="nmbSalePrice" id="nmbSalePrice" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
+
+
+
