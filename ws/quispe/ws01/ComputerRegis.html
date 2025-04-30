@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Register</title>
+</head>
+<body>
+    <h1>Computer Register</h1>
+    <form action="ServerComputer.php" method="post">
+        <label for="storage">Storage in GB:</label><br>
+        <input type="text" id="storage" name="storage" required><br><br>
+
+        <label for="CPU">CPU:</label><br>
+        <input type="text" id="CPU" name="CPU" required><br><br>
+
+        <label for="GPU">GPU:</label><br>
+        <input type="text" id="GPU" name="GPU" required><br><br>
+
+        <label for="RAM">RAM:</label><br>
+        <select name="ram" required>
+            <option value="4GB" selected>4GB</option>
+            <option value="8GB">8GB</option>
+            <option value="12GB">12GB</option>
+            <option value="16GB">16GB</option>
+            <option value="24GB">24GB</option>
+            <option value="32GB">32GB</option>
+            <option value="40GB">40GB</option>
+            <option value="64GB">64GB</option>
+        </select><br><br>
+
+        <label for="Price">Price:</label><br>
+        <input type="number" id="Price" name="price" step="0.01" required><br><br>
+
+        <label for="Amount">Amount:</label><br>
+        <input type="number" id="Amount" name="amount" required><br><br>
+
+        <label for="Category">Category:</label><br>
+        <select name="category" required>
+            <option value="Laptop">Laptop</option>
+            <option value="Desk" selected>Desk</option>
+            <option value="All-in-One">All-in-One</option>
+            <option value="SFF">SFF (small form factor)</option>
+        </select><br><br>
+
+        <label for="Peripherals">Do you have Peripherals?</label><br>
+        <label>
+            <input type="radio" name="peripherals" value="Yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="peripherals" value="No" checked> No
+        </label><br><br>
+
+        <label for="PeripheralsDescription">Peripherals Description:</label><br>
+        <input type="text" id="peripherals_description" name="peripherals_description" placeholder="Peripherals Description" required><br><br>
+
+        <label for="O.S.">O.S.:</label><br>
+        <select name="os" required>
+            <option value="Windows10">Windows10</option>
+            <option value="Windows11" selected>Windows11</option>
+            <option value="Linux-Ubuntu">Ubuntu</option>
+            <option value="ArchLinux">Arch-Linux</option>
+            <option value="MacOS">MacOS</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
