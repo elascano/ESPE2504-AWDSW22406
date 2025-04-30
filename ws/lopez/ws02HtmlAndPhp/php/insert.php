@@ -1,43 +1,27 @@
 <?php
 include("conn.php");
-$id = trim($_POST["id"]);
-$name = trim($_POST["name"]);
-$quantity = trim($_POST["number"]);
-$date = trim($_POST["date"]);
-$hour = trim($_POST["hour"]);
-$vip = trim($_POST["vip"]);
+$Cid = ($_POST["computerid"]);
+$Ipadd = ($_POST["ipadd"]);
+$manf = ($_POST["manf"]);
+$crtyr = ($_POST["creationy"]);
+$pross = ($_POST["pross"]);
+$memcap = ($_POST["memcapcty"]);
+$len = ($_POST["lenght"]);
+$wdt = ($_POST["widht"]);
+$rep = ($_POST["repnum"]);
+$price = ($_POST["price"]);
 
-
-if(isset($id) && isset($name) && isset($quantity) && isset($date) && isset($hour) && isset($vip)){
-    $stmtc= $conn->prepare("INSERT INTO client (personal_id, name) VALUES (?, ?)");
-    $stmtc->bind_param("ss", $id, $name);
-    $stmtc->execute();
-    $idclient = $conn->insert_id;
-    $stmtc->close();
-    if($hour == "nine"){
-        $hour = "09:00:00";
-    }else if($hour == "eleven"){
-        $hour = "11:00:00";
-    }else if($hour == "one"){
-        $hour = "13:00:00";
-    }else if($hour == "three"){
-        $hour = "15:00:00";
-    }else if($hour == "five"){
-        $hour = "17:00:00";
-    }else if($hour == "seven"){
-        $hour = "19:00:00";
-    }
-
-    $stmtd = $conn->prepare("INSERT INTO reservation (personal_id, clientsnumber, reservation_date, reservation_time, vip_exp) VALUES ( ?,?, ?, ?, ?)");
-    $stmtd->bind_param("iisss", $idclient, $quantity, $date, $hour, $vip);
-    $stmtd->execute();
-    $stmtd->close();
-
-    $conn->close();
+if(!($Cid=="") && !($Ipadd=="") && !($manf=="") && !($crtyr=="") && !($pross=="") && !($memcap=="") && !($len=="") && !($wdt=="") 
+&& !($rep=="") && !($price=="") ){
+$stmt= $conn->prepare("INSERT INTO computer_info (ComputerId, IpAddress, Manufacturer, YearofCreation, Processor
+, Memory_Capacity,Lenght, Widht, RepairsNumber, Price) VALUES (?,?,?,?,?,?,?,?,?,?)") ;
+$stmt->bind_param("sssisdddid", $Cid, $Ipadd, $manf,$crtyr,$pross, $memcap, $len, $wdt, $rep, $price);
+$stmt->execute();
     header("Location: ../index.html");
+$stmt->close();
+$conn->close();
 }else{
 echo "no data sent";
-header("Location: ../index.html");
 exit;
 }
 ?>
