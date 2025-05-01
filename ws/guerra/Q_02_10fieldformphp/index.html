@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computers Registration | Tech store</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <nav>
+        <section class="nav_left">
+            <h1>Labs Computer Registration</h1>
+        </section>
+        <section class="nav_right">
+            <a href="index.html">Home</a>
+            <a href="index.html">Register computer</a>
+        </section>
+    </nav>
+    
+    <h1>Registration form</h1>
+    <br>
+    <form name="registerform" method="POST" action="PHP/register.php">
+
+        <section>
+            <label for="name">Name of the machine</label>
+            <input type="text" name="name" id="name" required/>
+        </section>
+
+        <section>
+            <label for="operating_system">Operating System</label>
+            <select id="operating_system" name="operating_system" required>
+                <option value="">-- Select --</option>
+                <option value="windows 11">Windows 11</option>
+                <option value="Windows 11">Windows 10</option>
+                <option value="Linux">Linux</option>
+                <option value="MAC">MAC</option>
+              </select>
+        </section>
+
+        <section>
+            <label for="oslenguage">O.S Lenguage</label>
+            <select id="oslenguage" name="oslenguage" required>
+                <option value="">-- Select --</option>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+              </select>
+        </section>
+
+        <section>
+            <label for="processor">Proccesor</label>
+            <input type="text" name="processor" id="processor" required/>
+        </section>
+        
+        <section>
+            <label for="ram">RAM</label>
+            <input type="text" name="ram" id="ram" required/>
+        </section>
+
+        <section>
+            <label for="graphics">Graphics</label>
+            <input type="text" name="graphics" id="graphics" required/>
+        </section>
+
+        <section>
+            <label for="date_purchase">Date of purchase</label>
+            <input type="date" name="date_purchase" id="date_purchase" required/>
+        </section>
+
+        <section>
+            <label for="manufacturer">Manufacturer</label>
+            <input type="text" name="manufacturer" id="manufacturer" required/>
+        </section>
+
+        <section>
+            <label for="price">Price</label>
+            <input type="number"  step="0.01" name="price" id="price" required/>
+        </section>
+
+        <section>
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" required/>
+        </section>
+
+        <section>
+            <input type="submit", name="submit" id="submit" value="ACCEPT">
+        </section>
+
+    </form>
+</body>
+</html>
