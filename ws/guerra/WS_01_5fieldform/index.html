@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="CSS/style.css"/>
+</head>
+<body>
+
+    <nav>
+        <section class="nav_left">
+            <h1>Product Registration</h1> 
+        </section>
+        <section class="nav_right">
+            <a>Home</a>
+            <a>About us</a>
+            <a>Contact</a>
+        </section>
+    </nav>
+
+    <h1>Product registration</h1>
+    </body><br>
+    <form name="registerproduct" action="#" method="POST">
+
+        <section>
+            <label for="name">Name of the product</label>
+            <input type="text" name="name" id="name"/>
+        </section>
+
+        <section>
+            <label for="description">Description of the product</label>
+            <textarea name="textarea" id="description" rows="10" cols="50">Description of the product</textarea>
+        </section>
+
+        <section>
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="">-- Select --</option>
+                <option value="processors">Processors</option>
+                <option value="graphics">Graphics</option>
+                <option value="ps">Power source</option>
+                <option value="peripherals">Peripherals</option>
+              </select>
+        </section>
+
+        <section>
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price"/>
+        </section>
+
+        <section>
+            <label for="stock">Stock</label>
+            <input type="number" name="stock" id="stock"/>
+        </section>
+
+        <section>
+            <input type="submit", name="submit" id="submit" value="ACCEPT">
+        </section>
+
+    </form>
+</body>
+
+<footer>
+    <pre>Al rights reserved - Diana Guerra </pre>
+</footer>
+</html>
