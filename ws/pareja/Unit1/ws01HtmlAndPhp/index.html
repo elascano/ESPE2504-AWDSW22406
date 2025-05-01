@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Computer Registration</title>
+    </head>
+    <body>
+        <div>
+            <h2>
+                Register your computer for sale:
+            </h2>
+            <form id="regForm" name="regForm" method="post" action="php/register.php">
+                <table>
+                    <tr>
+                        <td>
+                            Brand:
+                        </td>
+                        <td>
+                            <select id="brand" name="brand" required>
+                                <option value=""></option>
+                                <option value="lenovo">Lenovo</option>
+                                <option value="acer">Acer</option>
+                                <option value="hp">HP</option>
+                                <option value="asus">ASUS</option>
+                                <option value="mac">MacBook</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CPU:
+                        </td>
+                        <td>
+                            <input type="text" id="cpu" name="cpu" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Amount of proccessors:
+                        </td>
+                        <td>
+                            <input type="number" id="proccessor_amount" name="proccessor_amount" step="1" required min="4" size="5"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            GB of ram:
+                        </td>
+                        <td>
+                            <input type="number" id="ram_gb" name="ram_gb" step="1" required min="4" size="5"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Amount of storage(GB):
+                        </td>
+                        <td>
+                            <input type="number" id="storage" name="storage" step="1" required min="250" size="5"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Manufacturing Date:
+                        </td>
+                        <td>
+                            <input type="date" id="manufacture_d" name="manufacture_d" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" id="gpu" name="gpu[0]"/> Dedicated GPU
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            State:
+                        </td>
+                        <td>
+                            <select id="state" name="state" required>
+                                <option value=""></option>
+                                <option value="new">New - Everything works perfectly</option>
+                                <option value="used">Used - It's slower but still works okay</option>
+                                <option value="damaged">Damaged - It needs some repairs.</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Price:
+                        </td>
+                        <td>
+                            <input type="number" id="price" name="price" step="0.01" max="1500" min="300" size="10"/>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <input type="submit" value="Send"/>
+                <input type="reset" value="Reset"/>
+            </form>
+
+        </div>
+    </body>
+</html>
