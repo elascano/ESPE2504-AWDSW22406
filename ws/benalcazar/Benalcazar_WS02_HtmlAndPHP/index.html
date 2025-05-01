@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Computer Register</title>
+</head>
+<body>
+    <div id="Container">
+        <h1>Computer Register</h1>
+
+        <form id="formComputer" name="formComputer" action="php/register.php" method="POST">
+            <table>
+                <tr>
+                    <td><label for="txtBrand">Brand:</label></td>
+                    <td><input type="text" name="txtBrand" id="txtBrand" required></td>
+                </tr>
+                <tr>
+                    <td><label for="txtCpuName">CPU Name:</label></td>
+                    <td><input type="text" name="txtCpuName" id="txtCpuName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="numCpuCores">CPU Cores:</label></td>
+                    <td><input type="number" name="numCpuCores" id="numCpuCores" required></td>
+                </tr>
+                <tr>
+                    <td><label for="numCpuFrecuency">CPU Frecuency:</label></td>
+                    <td><input type="number" name="numCpuFrecuency" id="numCpuFrecuency" required> GHz</td>
+                </tr>
+                <tr>
+                    <td><label for="txtNameMainboard">Name Mainboard:</label></td>
+                    <td><input type="text" name="txtNameMainboard" id="txtNameMainboard" required></td>
+                </tr>
+                <tr>
+                    <td><label for="numRamSize">Memory RAM size:</label></td>
+                    <td><input type="number" name="numRamSize" id="numRamSize" required> GB</td>
+                </tr>
+                <tr>
+                    <td><label for="numRomSize">Memory ROM size:</label></td>
+                    <td><input type="number" name="numRomSize" id="numRomSize" required> GB</td>
+                </tr>
+                <tr>
+                    <td><label for="txtGpuName">GPU name:</label></td>
+                    <td><input type="text" name="txtGpuName" id="txtGpuName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="numGpuSize">GPU size:</label></td>
+                    <td><input type="number" name="numGpuSize" id="numGpuSize" required> GB</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="btnSubmit" value="Register"></td>
+                </tr>
+            </table>    
+        </form>
+    </div>
+</body>
+</html>
