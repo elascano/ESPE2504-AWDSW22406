@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Store Register</title>
+</head>
+<body>
+    
+    <form name="frmStoreRegister" action="php/register.php" method="post" onsubmit="return validateForm()">
+        <h1>STORE REGISTER</h1>
+        <table class="contenedor">
+        <tr>
+            <td>Store ID:</td>
+            <td><input type="text" name="txtId" id="txtId"></td>
+        </tr>
+        <tr>
+            <td>Store Name:</td>
+            <td><input type="text" name="txtStoreName" id="txtStoreName"></td>
+        </tr>
+        <tr>
+            <td>Owner Name:</td>
+            <td><input type="text" name="txtOwnerName" id="txtOwnerName"></td>
+        </tr>              
+        <tr>
+            <td>Location:</td>
+            <td><input type="text" name="txtLocation" id="txtLocation"></td>
+        </tr>
+        <tr>
+            <td>Store Type:</td>
+            <td>
+                <input type="radio" name="storeType" value="Retail">Retail<br>
+                <input type="radio" name="storeType" value="Wholesale">Wholesale<br>
+                <input type="radio" name="storeType" value="Online">Online<br>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Product Categories:</td>
+            <td>
+                <input type="checkbox" name="categories[]" value="electronics">Electronics<br>
+                <input type="checkbox" name="categories[]" value="clothing">Clothing<br>
+                <input type="checkbox" name="categories[]" value="groceries">Groceries<br>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Register" name="btnRegister"></td>
+        </tr>
+        </table>
+    </form>
+    
+    <script src="js/validateForm.js"></script>
+</body>
+</html>
