@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Computer Registration</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <p>
+                        <img src="images/computer_icon.png" alt="logo">
+                        <h1>Compu-holics</h1></p>
+                    <p class="subtitle">
+                        <h3>Buy/sell computers for the best prices</h3>
+                    </p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="formspace">
+                    <h2>
+                        Register your computer for sale:
+                    </h2>
+                        <form id="regForm" name="regForm" method="post" action="php/register.php">
+                            <table>
+                                <tr>
+                                    <td class="formLabel">
+                                        Brand:
+                                    </td>
+                                    <td>
+                                        <select id="brand" name="brand" required>
+                                            <option value=""></option>
+                                            <option value="lenovo">Lenovo</option>
+                                            <option value="acer">Acer</option>
+                                            <option value="hp">HP</option>
+                                            <option value="asus">ASUS</option>
+                                            <option value="mac">MacBook</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="formLabel">
+                                        CPU:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="cpu" name="cpu" required class="textIn"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="formLabel">
+                                        Amount of proccessors:
+                                    </td>
+                                    <td>
+                                        <input type="number" id="proccessor_amount" class="numberIn" name="proccessor_amount" step="1" required min="4"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="formLabel">
+                                        GB of ram:
+                                    </td>
+                                    <td>
+                                        <input type="number" id="ram_gb" name="ram_gb" class="numberIn" step="1" required min="4" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="formLabel">
+                                        Amount of storage(GB):
+                                    </td>
+                                    <td>
+                                        <input type="number" id="storage" name="storage" class="numberIn" step="1" required min="250"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="formLabel">
+                                        Manufacturing Date:
+                                    </td>
+                                    <td>
+                                        <input type="date" id="manufacture_d" name="manufacture_d" required/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="checkbox" id="gpu" name="gpu[0]" /> Dedicated GPU
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="formLabel">
+                                        State:
+                                    </td>
+                                    <td>
+                                        <select id="state" name="state" required>
+                                            <option value=""></option>
+                                            <option value="new">New - Everything works perfectly</option>
+                                            <option value="used">Used - It's slower but still works okay</option>
+                                            <option value="damaged">Damaged - It needs some repairs.</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="formLabel">
+                                        Price:
+                                    </td>
+                                    <td>
+                                        <input type="number" id="price" name="price" step="0.01" max="1500" min="300" class="numberIn"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            <div class="buttonSpace">
+                                <input type="submit" value="Send" class="formButton" id="sendBtn"/>
+                                <input type="reset" value="Reset" class="formButton" id="resetBtn"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>Copyright (C) Marcelo Pareja 2025</p>
+                </div>
+            </div>
+    </body>
+</html>
