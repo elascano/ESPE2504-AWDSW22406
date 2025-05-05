@@ -1,0 +1,111 @@
+@charset "utf-8";
+@font-face {
+    font-family: "tron";
+    src: url("../fonts/TRON.TTF");
+}
+@font-face {
+    font-family: "cardot";
+    src: url("../fonts/CardotSemibold-1jzKM.ttf");
+}
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 0.7fr;
+    grid-template-rows: 0.7fr 4.8fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+  
+  .header { grid-area: header; 
+    background-color: rgb(28, 28, 28);
+    font-family: "tron";
+    color: lightskyblue;
+    text-align: center;
+}
+  
+  .main { grid-area: main; 
+    background-color: lightsteelblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+.formspace{
+    margin: 0 10%;
+    font-family: "cardot";
+}
+.formspace h2
+{
+    text-align: center;
+}
+.formLabel
+{
+    text-align: right;
+    height: 2rem;
+}
+input, select{
+    height: 1.25rem;
+}
+.textIn
+{
+    width: 20rch;
+}
+.numberIn
+{
+    width: 10rch;
+}
+.formButton
+{
+    position: relative;
+    font-family: "cardot";
+    font-size: 1rem;
+    margin: auto 7px;
+    color: darkslateblue;
+    background-color: inherit;
+    border: solid 2px darkslateblue;
+    border-radius: 5px;
+    height: 2rem;
+}
+.buttonSpace
+{
+    text-align: center;
+}
+.formButton:hover {
+    color: white;
+    transform: scale(1.25);
+}
+#resetBtn:hover {
+    background-color: red;
+}
+#sendBtn:hover {
+    background-color: green;
+}
+  
+.footer { 
+    font-family: "cardot";
+    grid-area: footer; 
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+.logo
+{
+    margin: auto;
+    display: inline-block;
+}
+.subtitle
+{
+    font-family: "cardot";
+    color: white;
+}
+
+.logo img
+{
+    float: left;
+    max-height: 70px;
+    max-width: 70px;
+}
