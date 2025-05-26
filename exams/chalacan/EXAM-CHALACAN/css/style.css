@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.KeyboardsForm {
+    background: #fff;
+    max-width: 400px;
+    margin: 40px auto 20px auto;
+    padding: 30px 25px 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.KeyboardsForm header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.KeyboardsForm p {
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.KeyboardsForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.KeyboardsForm label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #222;
+}
+
+.KeyboardsForm input[type="text"],
+.KeyboardsForm input[type="email"],
+.KeyboardsForm select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    transition: border 0.2s;
+}
+
+.KeyboardsForm input[type="text"]:focus,
+.KeyboardsForm input[type="email"]:focus,
+.KeyboardsForm select:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+.KeyboardsForm button[type="submit"] {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.KeyboardsForm button[type="submit"]:hover {
+    background: #005fa3;
+}
+
+.totalPrice {
+    background: #fff;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    padding: 18px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.totalPrice h2 {
+    margin: 0 0 8px 0;
+    color: #0078d7;
+    font-size: 1.3rem;
+}
+
+.totalPrice p#totalPrice {
+    font-size: 1.5rem;
+    color: #222;
+    margin: 0;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

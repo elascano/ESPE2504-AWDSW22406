@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Exam1</title>
+</head>
+<body>
+   <div class="KeyboardsForm">
+    <header>Exam 1</header>
+    <p>fORM ABOUT kEYBOARDS</p>
+    <form id="registers" action="php/register.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="keyboard">Keyboard Type:</label>
+        <select id="keyboard" name="keyboard">
+            <option value="mechanical">Mechanical</option>
+            <option value="membrane">Membrane</option>
+            <option value="wireless">Wireless</option>
+            <option value="ergonomic">Ergonomic</option>
+        </select>
+        
+        <label for="ComputeNumber1">Number of keys</label>
+        <input type="number" id="ComputeNumber1" name="ComputeNumber1" placeholder="Enter a number" min="1" required>
+        
+        <label for="ComputeNumber2">Color of keycaps price</label>
+        <select id="ComputeNumber2" name="ComputeNumber2">
+            <option value="10">blue</option>
+            <option value="15">red</option>
+            <option value="20">yellow</option>
+            <option value="25">skyblue</option>
+        </select>
+        
+        <label for="ComputeNumber3">Price of keyboard</label>
+        <input type="number" id="ComputeNumber3" name="ComputeNumber3" placeholder="Enter a number" min="0" required>
+        
+        <label for="discount">Discount (%)</label>
+        <input type="number" id="discount" name="discount" min="0" max="100" value="0">
+        
+        <label for="subtotal">Subtotal</label>
+        <input type="text" id="subtotal" name="subtotal" readonly>
+        
+        <label for="discountAmount">Discount Amount</label>
+        <input type="text" id="discountAmount" name="discountAmount" readonly>
+        
+        <button type="submit">Submit</button>
+   </div>
+   <div class="totalPrice">
+        <h2>Total Price</h2>
+        <p id="totalPrice">0</p>
+    </div>
+    <script src="js/calculate.js"></script>
+    <footer>© ChalacanDennison</footer>
+   </div>
+        
+    
+        
+   
+    
+</body>
+</html>
