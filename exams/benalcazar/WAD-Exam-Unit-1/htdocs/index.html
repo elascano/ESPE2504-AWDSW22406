@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title> Register Computer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1> Register Computer </h1>
+    <table>
+    <form action="php/register.php" method="post" id="registerForm" onsubmit="return calculatePerformance();">
+
+        <tr>   
+            <th>
+                <td>Brand: </td>
+                <td> <input type="text" id="brand" name="brand"> </td>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <td> CPU name: </td>
+                <td> <input type="text" id="cpu_name" name="cpu_name"> </td>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <td> CPU cores: </td>
+                <td> <input type="number" id="cpu_cores" name="cpu_cores"> </td>
+            </th>
+        </tr>   
+        <tr>
+            <th>
+                <td> CPU frecuency: </td>
+                <td> <input type="text" id="cpu_frecuency" name="cpu_frecuency"> </td>
+            </th>
+        </tr>   
+        <tr>
+            <th>
+                <td> Name mainboard: </td>
+                <td> <input type="text" id="mainboard_name" name="mainboard_name"> </td>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <td> Estimated Performance (GHz): </td>
+                <td> <span id="performance"></span> </td>
+            </th>
+        </tr>
+        <tr>  
+            <th>
+                <td> <input type="submit" value="Register"> </td>
+                <td> <input type="reset" value="Reset"> </td>
+            </th>    
+        </tr>
+        
+    </form>
+</table>
+<script src="js/calculates.js"></script>
+<body>
+</html>
