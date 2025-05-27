@@ -1,0 +1,9 @@
+.container
+{
+    margin: auto;
+    background-color: lightgray;
+    border-radius: 5%;
+    text-align: center;
+    width: min-content;
+    padding: 5%;
+}
