@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS soccer_players_db;
+USE soccer_players_db;
+
+CREATE TABLE players (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    team VARCHAR(50) NOT NULL,
+    position VARCHAR(50) NOT NULL,
+    goals INT NOT NULL,
+    assists INT NOT NULL,
+    age INT NOT NULL
+);
