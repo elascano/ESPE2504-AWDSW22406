@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="container">
+            <div >
+                <h1>Reserve parks in ur area, entrance fees, and more</h1>
+            </div>
+            <div >
+                <h2>Search a park</h2>
+                <select name="select" id="category">
+                    <option value="park_name">Park Name</option>
+                </select>
+                <input type="text" id="search_park">
+                <input type="button" id="search" value="Search">
+            </div>
+            <table >
+                <tr>
+                    <th>Park Name</th>
+                    <th>Park fee</th>
+                    <th>Park Capacity</th>
+                    <th>Park Area</th>
+                    <th>Park Total Cost</th>
+                </tr>
+                <tbody id="park_table"> </tbody>
+            </table>
+        </div>
+        <div>
+            <h1>Insert a park </h1>
+            <label for="">Park name</label>
+            <input type="text" id="name_park" name="name_park">
+            <label for="">Park fee</label>
+            <input type="text" id="fee_park" name="fee_park">
+            <label for="">Park capacity</label>
+            <input type="text" id="capacity_park" name="capacity_park">
+            <label for="">Park width</label>
+            <input type="text" id="width_park" name="width_park">
+            <label for="">Park Lenght</label>
+            <input type="text" id="lenght_park" name="lenght_park">
+            <input type="button" id="send" value="Send data">
+            
+        </div>
+        <script src="js/park_managment.js"></script>
+    </body>
+</html>
