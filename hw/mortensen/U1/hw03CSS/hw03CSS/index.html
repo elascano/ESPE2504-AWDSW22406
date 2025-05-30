@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="formContainer">
+        <h2 id="formTitle">PORTAL LOGIN</h2>
+        <form id="studentForm" action="guardar_estudiante.php" method="post">
+            <div class="formGroup">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input id="email" type="email" name="email" placeholder="Enter your email" maxlength="100" required>
+            </div>
+            <div class="formGroup">
+                <label for="lastName"><i class="fa fa-user-tag"></i> password</label>
+                <input id="lastName" type="text" name="lastName" placeholder="Enter your password" maxlength="50" required>
+            </div>
+            <button id="submitBtn" type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+</body>
+</html>
