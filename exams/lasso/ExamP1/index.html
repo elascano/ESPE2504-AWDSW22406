@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <Center><H1>EXAM WEB</H1></Center>
+    <center><h1>EXAM WEB</h1></center>
+
     <h2>Building Data</h2>
     <table id="buildingTable">
         <thead>
@@ -19,9 +20,7 @@
                 <th>Address</th>
             </tr>
         </thead>
-        <tbody>
-
-        </tbody>
+        <tbody></tbody>
         <tfoot>
             <tr>
                 <td colspan="2"><strong>Total Cost:</strong></td>
@@ -29,6 +28,22 @@
             </tr>
         </tfoot>
     </table>
+
+    <h3>Add New Building</h3>
+    <form id="addForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="cost" placeholder="Cost" required>
+        <input type="number" id="meters" placeholder="Meters" required>
+        <input type="text" id="owner" placeholder="Owner" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <button type="submit">Add Building</button>
+    </form>
+
+    <h3>Search Building by ID</h3>
+    <form id="searchForm">
+        <input type="number" id="searchId" placeholder="Enter ID">
+        <button type="submit">Search</button>
+    </form>
 
     <script src="./js/calculate.js"></script>
 </body>
