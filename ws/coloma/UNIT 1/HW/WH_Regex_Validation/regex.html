@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Validator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFF4E6;
+      color: #5A2A0C;
+      padding: 20px;
+    }
+
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #D35400;
+      margin-bottom: 10px;
+      width: 200px;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #FF6F00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Validate Code (e.g., L00321658)</h2>
+
+  <input type="text" id="codeInput" placeholder="Enter code">
+  <button onclick="validateCode()">Validate</button>
+
+  <p id="message"></p>
+
+  <script>
+    function validateCode() {
+      const code = document.getElementById("codeInput").value;
+      const pattern = /^L00\d{5,}$/;  // Empieza con L00 y al menos 5 dígitos
+
+      const message = document.getElementById("message");
+      if (pattern.test(code)) {
+        message.textContent = "✅ Valid Code!";
+        message.style.color = "green";
+      } else {
+        message.textContent = "❌ Invalid. Must start with 'L00' followed by 5+ digits.";
+        message.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

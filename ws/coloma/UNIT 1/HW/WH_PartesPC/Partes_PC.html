@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Specification Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFF3E0;
+      padding: 30px;
+      color: #4E342E;
+    }
+
+    h2 {
+      text-align: center;
+      color: #E65100;
+    }
+
+    form {
+      background-color: #FFE0B2;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 450px;
+      margin: auto;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 12px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #FB8C00;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #FB8C00;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      background-color: #FFFDE7;
+      padding: 15px;
+      border-radius: 8px;
+      color: #33691E;
+      font-size: 14px;
+    }
+
+    code {
+      font-family: monospace;
+      display: block;
+      background: #FFF8E1;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Computer Specification Form</h2>
+
+  <form onsubmit="return computePerformance()">
+    <label>Computer Name:</label>
+    <input type="text" id="compName" required>
+
+    <label>Processor:</label>
+    <select id="processor" required>
+      <option value="">Select</option>
+      <option value="3">Intel i3</option>
+      <option value="5">Intel i5</option>
+      <option value="7">Intel i7</option>
+      <option value="9">Intel i9</option>
+    </select>
+
+    <label>RAM (GB):</label>
+    <input type="number" id="ram" min="1" step="1" required>
+
+    <label>Storage (GB):</label>
+    <input type="number" id="storage" min="64" step="1" required>
+
+    <label>Graphics Card:</label>
+    <select id="gpu" required>
+      <option value="">Select</option>
+      <option value="1">Integrated</option>
+      <option value="2">Mid-range</option>
+      <option value="3">High-end</option>
+    </select>
+
+    <label>Screen Size (inches):</label>
+    <input type="number" id="screen" min="10" max="32" step="0.1" required>
+
+    <label>Battery Life (hours):</label>
+    <input type="number" id="battery" min="1" max="24" step="0.5" required>
+
+    <button type="submit">Calculate Score</button>
+
+    <div id="result"></div>
+  </form>
+
+  <script>
+    function computePerformance() {
+      const name = document.getElementById("compName").value;
+      const processor = parseInt(document.getElementById("processor").value);
+      const ram = parseInt(document.getElementById("ram").value);
+      const storage = parseInt(document.getElementById("storage").value);
+      const gpu = parseInt(document.getElementById("gpu").value);
+      const screen = parseFloat(document.getElementById("screen").value);
+      const battery = parseFloat(document.getElementById("battery").value);
+
+      const result = document.getElementById("result");
+
+      if ([processor, ram, storage, gpu, screen, battery].some(isNaN)) {
+        result.innerHTML = "<span style='color:red;'>⚠️ Please fill all fields correctly.</span>";
+        return false;
+      }
+
+      // Score formula
+      const score = (processor * 20) + (ram * 2) + (storage * 0.1) +
+                    (gpu * 15) + (screen * 1.5) + (battery * 2);
+
+      result.innerHTML = `
+        <strong>✅ ${name}'s Estimated Performance Score:</strong> <br>
+        <h3 style="color:#2E7D32;">${score.toFixed(1)}</h3>
+        <code>
+          Score = (Processor × 20) + (RAM × 2) + (Storage × 0.1) +<br>
+                  (GPU × 15) + (Screen × 1.5) + (Battery × 2)<br><br>
+
+          = (${processor}×20) + (${ram}×2) + (${storage}×0.1) +<br>
+            (${gpu}×15) + (${screen}×1.5) + (${battery}×2)
+        </code>
+      `;
+      return false; // prevent form submit
+    }
+  </script>
+
+</body>
+</html>
