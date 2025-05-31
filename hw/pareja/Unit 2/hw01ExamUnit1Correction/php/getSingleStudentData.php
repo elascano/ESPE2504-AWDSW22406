@@ -1,0 +1,29 @@
+<?php
+include("db_connection.php");
+if($_SERVER["REQUEST_METHOD"]="POST")
+{
+    $studentId=$_POST['studentId'];
+    $searchQuery= "SELECT * FROM students WHERE student_id=? and is_active=TRUE";
+    $studentData="";
+    $search=$conn->prepare($searchQuery);
+    $search->bind_param("i",$studentId);
+    if($search->execute())
+    {
+        $result=$search->get_result();
+        $information=mysqli_fetch_assoc($result);
+        $studentData.="
+            <tr>
+                    <td>".htmlspecialchars($information['name'])."</td>
+                    <td>".htmlspecialchars($information['class'])."</td>
+                    <td>".htmlspecialchars($information['grade_unit1'])."</td>
+                    <td>".htmlspecialchars($information['grade_unit2'])."</td>
+                    <td>".htmlspecialchars($information['grade_unit3'])."</td>
+                    <td>".htmlspecialchars($information['final_grade'])."</td>
+                    <td>
+                        <p><a href='updateStudent.php?id=" . urlencode($information['student_id']) . "'>Modify</a><br><a href='../php/deleteStudent.php?id=" . urlencode($information['student_id']) . "'>Delete</a></p>
+                    </td>
+            </tr>
+        ";
+    }
+}
+?>

@@ -1,0 +1,85 @@
+.container
+{
+    padding: 5%;
+    position: relative;
+    transform: translate(0,10%);
+    margin: auto;
+    background-color: lightgray;
+    border-radius: 5%;
+    text-align: center;
+    width: min-content;
+    height: min-content;
+    padding: 5%;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.searchContainer
+{
+    position: relative;
+    transform: translate(0,10%);
+    margin: auto;
+    border-radius: 5%;
+    text-align: center;
+    width: min-content;
+    padding: 5%;
+    box-shadow: 3px 3px 3px gray;
+    border-bottom: solid black 1px;
+}
+
+.tablecontainer
+{
+    position: relative;
+    margin: auto;
+    border-radius: 5%;
+    text-align: center;
+    width: 80%;
+    display: block;
+}
+.dataTable{
+    margin: auto;
+    border: 1px solid black;
+}
+.dataTable th
+{
+    background-color: slateblue;
+    color: white;
+}
+.dataTable td,th{
+    margin: 0;
+    text-align: center;
+}
+
+body{
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=submit], button
+{
+    padding: 5%;
+    color: white;
+    background-color: slateblue;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 5%;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    height: min-content;
+    margin-top: 5px;
+    
+}
+.headContainer
+{
+    display: inline-block;
+    height: min-content;
+}
+.formControl
+{
+    height: 1.5rem;
+    border-radius: 5%;
+    border: none;
+}
+.invalidInput
+{
+    border: 0.75px red solid;
+    background-color: rgb(247, 196, 195);
+}
