@@ -1,0 +1,186 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('school.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+#formContainer {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+#formTitle {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* --- Barra lateral superior --- */
+#sideMenu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+#sideMenu button,
+#sideMenu input {
+    width: 160px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sideMenu input {
+    background-color: #f0f0f0;
+    color: #333;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+#sideMenu button:hover {
+    background-color: #45a049;
+}
+
+#sideMenu input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Asegura que el formContainer no quede tapado */
+#formContainer {
+    margin-top: 100px; /* espacio para la barra lateral */
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    #sideMenu {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: auto;
+        padding: 10px;
+    }
+    #sideMenu button,
+    #sideMenu input {
+        width: auto;
+        font-size: 0.85rem;
+    }
+    #formContainer {
+        margin-top: 20px;
+    }
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+    #headerMenu {
+        flex-direction: column;
+    }
+}
+
+
+/* Responsividad */
+@media (max-width: 600px) {
+    #formContainer {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #formTitle {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,15 @@
+body { padding: 20px; } 
+form { 
+    max-width: 400px; 
+    margin: auto; 
+} 
+input, select { 
+    display: block; 
+    width: 100%; 
+    margin-bottom: 10px; 
+    padding: 8px; 
+}
+ button { color: rgb(78, 214, 25); 
+    padding: 10px; 
+    border: none; 
+ }
