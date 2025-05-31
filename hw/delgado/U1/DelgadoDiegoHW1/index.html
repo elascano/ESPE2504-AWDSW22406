@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Device Inventory Entry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Device Inventory Entry</h1>
+
+  <form id="deviceForm" class="device-form">
+    <div class="field-group">
+      <label for="deviceType">Device Type:</label>
+      <select id="deviceType" name="deviceType" required>
+        <option value="">Choose type</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Desktop">Desktop</option>
+        <option value="Tablet">Tablet</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="field-group">
+      <label for="identifier">Serial Number:</label>
+      <input type="text" id="identifier" name="identifier" required />
+    </div>
+
+    <div class="field-group">
+      <label for="os">Operating System:</label>
+      <input type="text" id="os" name="os" required />
+    </div>
+
+    <div class="field-group">
+      <label for="memory">Memory Size:</label>
+      <input type="number" id="memory" name="memory" min="1" placeholder="GB" required />
+    </div>
+
+    <div class="field-group">
+      <label for="year">Purchase Year:</label>
+      <input type="number" id="year" name="year" min="2000" max="2030" required />
+    </div>
+
+    <div class="field-group">
+      <label>Accessories Included:</label>
+      <div class="accessories">
+        <label><input type="checkbox" value="Charger" /> Charger</label>
+        <label><input type="checkbox" value="Mouse" /> Mouse</label>
+        <label><input type="checkbox" value="Keyboard" /> Keyboard</label>
+        <label><input type="checkbox" value="Bag" /> Carrying Bag</label>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Comments, special conditions, etc."></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" onclick="submitDevice()">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+  <section id="summaryDisplay"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>
