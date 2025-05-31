@@ -1,0 +1,47 @@
+body
+{
+    background-color: lightblue;
+}
+.container
+{
+    text-align: center;
+}
+#formDiv
+{
+    width: min-content;
+    height: min-content;
+    margin: 10% auto;
+    padding:2% 5%;
+    border-radius: 5%;
+    box-shadow: 3 3 3;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+}
+#formDiv h1
+{
+    text-align: center;
+}
+#formDiv button
+{
+    margin: auto;
+}
+.loanTable
+{
+    display: inline-block;
+    height: min-content;
+    padding: 5%;
+    border-radius: 5% ;
+    font-family: Arial, Helvetica, sans-serif;
+    width: min-content;
+    background-color: white;
+    margin: 5% auto;
+}
+.loanTable td,th
+{
+    width: 100%;
+}
+.secret
+{
+    display: none;
+}

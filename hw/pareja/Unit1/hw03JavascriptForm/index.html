@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="formDiv">
+            <h1>Book Loans</h1>
+            <form onsubmit="event.preventDefault()">
+                <p>
+                    Library Id or normal id:<br>
+                    <input type="text" id="idDocument" name="idDocument" onchange="verifyId()" required>
+                </p>
+                <p id="messageElm"></p>
+                <p>
+                    Book title:<br>
+                    <input type="text" id="title" name="title" required>
+                </p>
+                <p>
+                    Loan date:<br>
+                    <input type="date" id="loanDate" name="loanDate" onchange="getReturnDate()" required>
+                </p>
+                <p id="dateMsg">
+                    Return date:<br>
+                    <input type="date" readonly id="returnDate">
+                </p>
+            <p>
+                <button onclick="addLoan()">Confirm</button>
+            </p>
+            </form>
+        </div>
+        <div class="loanTable">
+            <table border="1" id="bookLoans">
+                <tr>
+                    <th>
+                        Id document
+                    </th>
+                    <th>
+                        Loan date
+                    </th>
+                    <th>
+                        Book Title
+                    </th>
+                    <th>
+                        Return Date
+                    </th>
+                    <th>
+                        Returned
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(243, 243, 162);
+}
+
+.container
+{
+    width: fit-content;
+    height: min-content;
+    padding: 5%;
+    margin: auto;
+    background-color: white;
+    border-radius: 7%;
+    box-shadow: 3px 3px 3px gray;
+}
+.container h2
+{
+    text-align: center;
+}
+.container button,input,label
+{
+    margin: auto;
+}
+.container input
+{
+    height: 1.2rem;
+    min-width: 90%;
+    max-width: fit-content;
+}
+.container button
+{
+    box-shadow: 3px 3px 3px lightblue;
+    background-color: rgb(91, 91, 199);
+    padding: 2%;
+    border-radius: 7%;
+    border: none;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+.invalid-input
+{
+    border: red solid 0.75px;
+    background-color: rgb(241, 192, 192);
+}
+#alertLabel
+{
+    font-size: 0.75rem;
+}
+.label-invalid
+{
+    color: red;
+}
+.label-valid{
+    color: green;
+}
