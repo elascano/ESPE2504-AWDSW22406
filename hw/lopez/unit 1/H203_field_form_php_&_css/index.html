@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Doc System</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+            <h1><img src="img/logo.jpg" height="70px"/>Doc System</h1>
+            <hr/>
+        <form method="post" id="formc" action="php/insert.php">
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="computerid">Computer Id:</label>
+                            <input type="text" name="computerid" maxlength="128" size="50" required/>
+                        </td>
+                        <td>
+                            <label for="memcapcty">Memory Capacity (Gb):</label>
+                            <input type="number" name="memcapcty" maxlength="10" size="50" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ipadd">Ip Adress: &nbsp&nbsp&nbsp&nbsp</label>
+                            <input type="text" name="ipadd"  size="50" required/>
+                        </td>
+                        <td>
+                            <label for="lenght">Lenght (inch):&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <input type="number" name="lenght" maxlength="10" size="50" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="manf">Manufacturer:</label>
+                            <input type="text" name="manf" size="50"  maxlength="64" required/>
+                        </td>
+                        <td>
+                            <label for="widht">Widht (inch):&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <input type="number" name="widht" size="50" maxlength="10" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="creationy">Creation Year:</label>
+                            <input type="number" name="creationy" size="50" required/>
+                        </td>
+                        <td>
+                            <label for="repnum">Number of Repairs: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <input type="number" name="repnum" size="50" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pross">Processor:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <input type="text" name="pross" size="50" required/>
+                        </td>
+                        <td>
+                            <label for="price">Price (Dollars): &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <input type="number" name="price" size="50" required/>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <input type="submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Computer Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Computer Registration Form</h2>
+
+  <form id="computerForm" class="form-container">
+    <div class="form-group">
+      <label for="brand">Brand:</label>
+      <input type="text" id="brand" name="brand" required />
+    </div>
+
+    <div class="form-group">
+      <label for="model">Model:</label>
+      <input type="text" id="model" name="model" required />
+    </div>
+
+    <div class="form-group">
+      <label for="processor">Processor:</label>
+      <input type="text" id="processor" name="processor" required />
+    </div>
+
+    <div class="form-group">
+      <label for="ram">RAM (GB):</label>
+      <select id="ram" name="ram" required>
+        <option value="">Select RAM</option>
+        <option value="4">4 GB</option>
+        <option value="8">8 GB</option>
+        <option value="16">16 GB</option>
+        <option value="32">32 GB</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="storage">Storage (GB):</label>
+      <select id="storage" name="storage" required>
+        <option value="">Select Storage</option>
+        <option value="128">128 GB</option>
+        <option value="256">256 GB</option>
+        <option value="512">512 GB</option>
+        <option value="1024">1 TB</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="condition">Condition:</label>
+      <select id="condition" name="condition" required>
+        <option value="">Select Condition</option>
+        <option value="New">New</option>
+        <option value="Used">Used</option>
+        <option value="Refurbished">Refurbished</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="otherFeatures">Other Features:</label>
+      <textarea id="otherFeatures" name="otherFeatures" rows="3" placeholder="e.g. Touchscreen, Backlit keyboard"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Tags:</label>
+      <div class="tags-container">
+        <label><input type="checkbox" value="Gaming" class="tag-checkbox" /> Gaming</label>
+        <label><input type="checkbox" value="Workstation" class="tag-checkbox" /> Workstation</label>
+        <label><input type="checkbox" value="Portable" class="tag-checkbox" /> Portable</label>
+        <label><input type="checkbox" value="Battery" class="tag-checkbox" /> Long Battery</label>
+        <label><input type="checkbox" value="Lightweight" class="tag-checkbox" /> Lightweight</label>
+      </div>
+    </div>
+
+    <div class="form-buttons">
+      <button type="button" onclick="registerComputer()">Register</button>
+      <button type="reset">Clear</button>
+    </div>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

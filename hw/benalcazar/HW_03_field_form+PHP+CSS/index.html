@@ -1,0 +1,96 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computers</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Computers</h2>
+    <form action="php/register.php" method="POST">
+      <label for="marca">Marca:</label>
+      <input type="text" id="marca" name="marca" placeholder="Ej: HP, Lenovo, Dell" required>
+
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" placeholder="Ej: Pavilion 15" required>
+
+      <label for="procesador">Procesador:</label>
+      <input type="text" id="procesador" name="procesador" placeholder="Ej: Intel Core i5" required>
+
+      <label for="ram">Memoria RAM (GB):</label>
+      <input type="number" id="ram" name="ram" min="1" required>
+
+      <label for="almacenamiento">Almacenamiento (GB):</label>
+      <input type="number" id="almacenamiento" name="almacenamiento" min="1" required>
+
+      <label for="tipo">Tipo de Computador:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Seleccionar...</option>
+        <option value="portatil">Portátil</option>
+        <option value="escritorio">Escritorio</option>
+        <option value="all-in-one">Todo en Uno</option>
+      </select>
+
+      <label for="sistema">Sistema Operativo:</label>
+      <select id="sistema" name="sistema" required>
+        <option value="">Seleccionar...</option>
+        <option value="windows">Windows</option>
+        <option value="macos">macOS</option>
+        <option value="linux">Linux</option>
+      </select>
+
+      <label for="precio">Precio (USD):</label>
+      <input type="number" id="precio" name="precio" min="0" step="0.01" required>
+
+      <label for="fecha">Fecha de Compra:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="comentarios">Comentarios Adicionales:</label>
+      <textarea id="comentarios" name="comentarios" rows="4" placeholder="Detalles adicionales..."></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

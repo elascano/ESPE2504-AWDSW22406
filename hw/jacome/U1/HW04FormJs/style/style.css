@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+	background-color:aquamarine; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+	text-align: center;
+}
+
+label {
+	display: inline-block;
+	width: 200px;
+}
+
+input {
+    width: 55%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    text-align: right;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #229F9A;
+    color: white;
+    font-weight: bold;
+}
+

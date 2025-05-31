@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Fine Registration</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Team Fine Registration</h2>
+    
+    <label for="teamName">Team Name</label>
+    <input type="text" id="teamName" placeholder="Enter team name" />
+
+    <label for="yellowCards">Yellow Cards</label>
+    <input type="number" id="yellowCards" placeholder="0" min="0" />
+
+    <label for="redCards">Red Cards</label>
+    <input type="number" id="redCards" placeholder="0" min="0" />
+
+    <button onclick="calculateFine()">Calculate Fine</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script href="./calculate.js"></script>
+</body>
+</html>
