@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Club - Join Us</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Join Our Book Club</h2>
+    <form action="register.php" method="POST">
+      <label for="fullname">Full Name</label>
+      <input type="text" name="fullname" id="fullname" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="password">Create Password</label>
+      <input type="password" name="password" id="password" required />
+
+      <label for="genre">Favorite Genre</label>
+      <select name="genre" id="genre" required>
+        <option value="">-- Select a genre --</option>
+        <option>Fiction</option>
+        <option>Non-fiction</option>
+        <option>Mystery</option>
+        <option>Fantasy</option>
+        <option>Science Fiction</option>
+        <option>Biography</option>
+      </select>
+
+      <label for="reason">Why do you love reading?</label>
+      <textarea name="reason" id="reason" required></textarea>
+
+      <button type="submit">Become a Member</button>
+    </form>
+  </div>
+</body>
+</html>

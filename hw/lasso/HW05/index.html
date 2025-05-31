@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESPE</title>
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h2>Validate Espe Email</h2>
+    <input
+      type="email"
+      id="email"
+      placeholder="example@espe.edu.ec"
+      oninput="validateEmail()"
+    />
+    <div id="message" class="message"></div>
+    <button onclick="validateEmail()">Validate</button>
+  </div>
+
+  <script href="./calculate.js"></script>
+</body>
+</html>
