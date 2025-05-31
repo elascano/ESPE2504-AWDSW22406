@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Placas Madre</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>MainBoards</h2>
+    <form id="placaForm">
+      <label for="puertosFrontales">Número de Puertos Frontales USB:</label>
+      <input type="number" id="puertosFrontales" name="puertosFrontales" min="0" required>
+
+      <label for="puertosTraseros">Número de Puertos Traseros USB:</label>
+      <input type="number" id="puertosTraseros" name="puertosTraseros" min="0" required>
+
+      <label for="puertosOtros">Otros Puertos USB (internos, etc.):</label>
+      <input type="number" id="puertosOtros" name="puertosOtros" min="0" required>
+
+      <label for="chipset">Chipset de la Placa:</label>
+      <select id="chipset" name="chipset" required>
+        <option value="">Seleccionar...</option>
+        <option value="intel">Intel</option>
+        <option value="amd">AMD</option>
+      </select>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultados" class="results" style="display: none;">
+      <h3>Resultados:</h3>
+      <div id="detalleDatos"></div>
+      <div id="totalPuertosUSB"></div>
+    </div>
+  </div>
+  <script src="js/calculate.js"></script>
+</body>
+</html>
