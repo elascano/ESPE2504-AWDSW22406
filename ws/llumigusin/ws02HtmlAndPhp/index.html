@@ -4,64 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Computer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Register Computer</h1>
-    <hr>
-    <form name="frmbook" action="register.php" method="POST">
-        <table>
-            <tr>
-                <td>ID:</td>
-                <td><input type="text" name="textID" required></td>
-            </tr>
-            <tr>
-                <td>Monitor:</td>
-                <td><input type="text" name="textMonitor" required></td>
-            </tr>
-            <tr>
-                <td>Number Processors:</td>
-                <td><input type="text" name="textNProcessors" required></td>
-            </tr>
-            <tr>
-                <td>Hard Disk:</td>
-                <td><input type="text" name="textHDisk" required></td>
-            </tr>
-            <tr>
-                <td>Processor:</td>
-                <td><input type="text" name="textProcessors" required></td>
-            </tr>
-            <tr>
-                <td>RAM:</td>
-                <td><input type="text" name="textRAM" required></td>
-            </tr>
-            <tr>
-                <td>Operative System:</td>
-                <td><input type="text" name="textOSystem" list="OSystemList"required></td>
-                <datalist id="OSystemList">
-                    <option value="Windows">
-                    <option value="Linux">
-                    <option value="MacOS">    
-                </datalist>
-            </tr>
-            <tr>
-                <td>Manufacture Price:</td>
-                <td><input type="text" name="textMPrice" required></td>
-            </tr>
-            <tr>
-                <td>Price:</td>
-                <td><input type="text" name="textPrice" required></td>
-            </tr>
-            <tr>
-                <td>Amount in stock:</td>
-                <td><input type="text" name="textAStock" required></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit" name="btnAcc" value="Accept"></td>
-            </tr>
-        </table>
-    </form>
-    <hr>
-
-    
+    <div class="form-container">
+        <h1>Register Computer</h1>
+        <hr>
+        <form name="frmbook" action="register.php" method="POST">
+            <table>
+                <tr>
+                    <td><label for="textID">ID:</label></td>
+                    <td><input type="text" name="textID" id="textID" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textMonitor">Monitor:</label></td>
+                    <td><input type="text" name="textMonitor" id="textMonitor" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textNProcessors">Number Processors:</label></td>
+                    <td><input type="text" name="textNProcessors" id="textNProcessors" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textHDisk">Hard Disk:</label></td>
+                    <td><input type="text" name="textHDisk" id="textHDisk" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textProcessors">Processor:</label></td>
+                    <td><input type="text" name="textProcessors" id="textProcessors" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textRAM">RAM:</label></td>
+                    <td><input type="text" name="textRAM" id="textRAM" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textOSystem">Operative System:</label></td>
+                    <td>
+                        <input type="text" name="textOSystem" id="textOSystem" list="OSystemList" required>
+                        <datalist id="OSystemList">
+                            <option value="Windows">
+                            <option value="Linux">
+                            <option value="MacOS">    
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="textMPrice">Manufacture Price:</label></td>
+                    <td><input type="text" name="textMPrice" id="textMPrice" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textPrice">Price:</label></td>
+                    <td><input type="text" name="textPrice" id="textPrice" required></td>
+                </tr>
+                <tr>
+                    <td><label for="textAStock">Amount in stock:</label></td>
+                    <td><input type="text" name="textAStock" id="textAStock" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit-row">
+                        <input type="submit" name="btnAcc" value="Accept">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <hr>
+    </div>
 </body>
 </html>
