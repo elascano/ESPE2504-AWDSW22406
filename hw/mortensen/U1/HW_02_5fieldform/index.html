@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <h2>Student Information Form</h2>
+    <form id="studentForm" action="guardar_estudiante.php" method="post">
+        <input type="text" name="firstName" placeholder="First Name" maxlength="50" required>
+        <input type="text" name="lastName" placeholder="Last Name" maxlength="50" required>
+        <input type="email" name="email" placeholder="Email" maxlength="100" required>
+        
+        <input type="number" name="age" placeholder="Age" min="1" max="18" required>
+
+        <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
