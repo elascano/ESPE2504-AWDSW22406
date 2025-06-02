@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Students Registration</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="Computing.js"></script>
+</head>
+
+<body>
+    <h1>STUDENTS REGISTRATION</h1>
+    <hr size="3" />
+    <form name="frmStudents" enctype="multipart/form-data" onsubmit="return false;">
+        <table>
+            <tr>
+                <td>DNI:</td>
+                <td><input type="text" name="txtDNI" id="dni" /></td>
+                <td><button type="button" onclick="printDni()">Show DNI</button></td>
+            </tr>
+            <tr>
+                <td>BIRTH DATE:</td>
+                <td><input type="date" name="txtBirthDate" id="birthDate" /></td>
+                <td><button type="button" onclick="printBirthDate()">Show Birth Date</button></td>
+            </tr>
+            <tr>
+                <td>CELLPHONE NUMBER:</td>
+                <td><input type="tel" name="txtCellphone" id="cellphone" /></td>
+                <td><button type="button" onclick="printCellphone()">Show Cellphone</button></td>
+            </tr>
+            <tr class="btnValidate">
+                <td colspan="3"><input type="submit" name="btnSubmit" value="Validate" /></td>
+            </tr>
+        </table>
+    </form>
+    <h2 id="anotherMessage"></h2>
+    <h2 id="anotherMessage1"></h2>
+    <h2 id="anotherMessage2"></h2>
+
+    <hr />
+</body>
+
+</html>

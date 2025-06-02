@@ -1,0 +1,21 @@
+body {
+width: 720px;
+margin: auto;
+}
+h1 {
+text-align:center;
+}
+table{
+    width: 100%;
+    align-items: center;
+}
+div {
+	border: dashed;
+	text-align: center;
+}
+.btnValidate {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
