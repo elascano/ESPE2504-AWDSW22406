@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pet Registration</title>
+    </head>
+
+    <body>
+        <p>
+            <img src="pet.jpeg" width="10%">
+            <h1>Pet Registration</h1>
+        </p>
+        
+        <br>
+
+        <hr size="3">
+        <form name="formStudent" method="post" action="php/register.php">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" name="txtId" placeholder="Ex: Boby">
+                </td>
+            </tr>
+            <tr>
+
+            </tr>
+                <td>Kind of pet:</td>
+                <td>
+                    
+                        <input name="txtKind" type="radio" value="dog">Dog
+                        <input name="txtKind" type="radio" value="cat">Cat
+                        <input name="txtKind" type="radio" value="bird">Bird
+                        <input name="txtKind" type="radio" value="other">Other
+                </td>
+            <tr>
+                <td>Pet Breed:</td>
+                <td>
+                    <input type="text" name="txtName" placeholder="Ex: Chihuahua">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" value="Male">Male
+                    <input type="radio" value="Female">Female
+
+                </td>
+            </tr>
+            <tr>
+                <td>Year of Born:</td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>Behavior</td>
+                <td>
+                    <select>
+                        <option value="">Select one option</option>
+                        <option value="happy">Happy</option>
+                        <option value="agressive">Agressive</option>
+                        <option value="shy">Shy</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="submit" name="btnSubmit" value="Accept">
+                </td>
+            </tr>
+        </table>
+    </form>
+        <br>
+        <hr>
+        
+
+    </body>
+
+</html>
