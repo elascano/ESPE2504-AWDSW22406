@@ -1,0 +1,35 @@
+<?php
+include 'conexion.php';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $fullName = $_POST['fullName'];
+    $employeeId = $_POST['employeeId'];
+    $emailAddress = $_POST['emailAddress'];
+    $hireDate = $_POST['hireDate'];
+    $position = $_POST['position'];
+    $department = $_POST['department'];
+    $salary = $_POST['salary'];
+
+    if (empty($fullName) || empty($employeeId) || empty($emailAddress)) {
+        echo "<script>alert('Nombre, ID y correo son obligatorios.'); window.history.back();</script>";
+        exit;
+    }
+
+    $sql = "INSERT INTO employees (employee_id, full_name, email_address, hire_date, position, department, salary) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("isssssd", $employeeId, $fullName, $emailAddress, $hireDate, $position, $department, $salary);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Empleado registrado correctamente'); window.location.href='../index.html';</script>";
+    } else {
+        echo "<script>alert('Error: " . $stmt->error . "'); window.history.back();</script>";
+    }
+
+    $stmt->close();
+    $conexion->close();
+} else {
+    echo "<script>alert('Acceso denegado'); window.location.href='../index.html';</script>";
+}
+?>

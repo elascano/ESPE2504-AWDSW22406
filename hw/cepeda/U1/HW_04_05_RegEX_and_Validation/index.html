@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Students Registration</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="RegEx.js"></script>
+</head>
+
+<body>
+    <h1>STUDENTS REGISTRATION</h1>
+    <hr size="3" />
+    <form name="frmStudents" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>BIRTH DATE:</td>
+                <td><input type="date" name="txtBirthDate" id="birthDate"/></td>
+            </tr>
+            <tr class="btnValidate">
+                <td colspan="3"><input type="submit" name="btnSubmit" value="Validate" /></td>
+            </tr>
+        </table>
+    </form>
+    <hr />
+</body>
+
+</html>
