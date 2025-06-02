@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pssword Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .message-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-header bg-dark text-white">
+      Secure Password
+    </div>
+    <div class="card-body">
+      <form id="passwordForm" novalidate>
+        <label id="msgLabel" class="form-label message-label text-secondary"></label>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required>
+          <div class="invalid-feedback">
+            The password must have at least 8 characters, one uppercase letter, one lowercase letter, one number and one symbol.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Validar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../js/validation.js"></script>
+</body>
+</html>
