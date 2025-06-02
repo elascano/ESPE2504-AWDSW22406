@@ -1,0 +1,50 @@
+/* Estilos generales para el formulario */
+.formulario {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto;   /* Centra el formulario en la página */
+    padding: 20px;    /* Espacio interno */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 10px;       /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Estilo para las etiquetas (labels) */
+  .formulario label {
+    display: block;         /* Cada etiqueta en su propia línea */
+    margin-top: 15px;       /* Espacio superior */
+    margin-bottom: 5px;     /* Espacio inferior */
+    font-weight: bold;      /* Texto en negrita */
+  }
+  
+  /* Estilo para los campos de entrada */
+  .formulario input,
+  .formulario textarea {
+    width: 100%;             /* Que ocupen todo el ancho */
+    padding: 10px;           /* Espacio interno */
+    border: 1px solid #ccc;  /* Borde gris claro */
+    border-radius: 5px;      /* Bordes redondeados */
+    box-sizing: border-box;  /* Incluir padding y border en el ancho total */
+  }
+  
+  /* Estilo especial para el área de texto */
+  .formulario textarea {
+    height: 100px;          /* Altura fija */
+    resize: vertical;       /* Solo permitir redimensionar hacia arriba o abajo */
+  }
+  
+  /* Estilo para el botón de enviar */
+  .formulario button {
+    margin-top: 20px;            /* Espacio arriba del botón */
+    padding: 10px 20px;          /* Espacio interno */
+    background-color: #007BFF;   /* Azul */
+    color: white;                /* Texto blanco */
+    border: none;                /* Sin borde */
+    border-radius: 5px;          /* Bordes redondeados */
+    cursor: pointer;             /* Cambiar el cursor al pasar */
+  }
+  
+  /* Efecto al pasar el cursor por el botón */
+  .formulario button:hover {
+    background-color: #0056b3;  /* Azul más oscuro */
+  }
+  

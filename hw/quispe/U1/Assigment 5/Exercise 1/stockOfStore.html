@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock of Store</title>
+  </head>
+  <body>
+    <form
+      action="#"
+      method="post"
+      style="
+        width: 50%;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      "
+    >
+      <label for="store">Product:</label><br /><br />
+
+      <label for="productname">Product Name:</label><br />
+      <input
+        type="text"
+        id="productname"
+        name="productname"
+        placeholder="Enter product name"
+      /><br /><br />
+
+      <label for="category">Category:</label><br />
+      <select name="select" id="category">
+        <option value="dairy">Dairy</option>
+        <option value="vegetable" selected>Vegetable</option>
+        <option value="fruit">Fruit</option>
+        <option value="meat">Meat</option>
+        <option value="bakery">Bakery</option>
+        <option value="snack">Snack</option></select
+      ><br /><br />
+
+      <label for="quantity">Description:</label><br />
+      <input
+        type="text"
+        id="quantity"
+        name="quantity"
+        placeholder="Enter product description"
+      /><br /><br />
+
+      <!-- Nuevo campo: Price -->
+      <label for="price">Price:</label><br />
+      <input
+        type="number"
+        id="price"
+        name="price"
+        placeholder="Enter price"
+        step="0.01"
+        min="0"
+      /><br /><br />
+
+      <!-- Nuevo campo: Expiration Date -->
+      <label for="expiration">Expiration Date:</label><br />
+      <input type="date" id="expiration" name="expiration" /><br /><br />
+
+      <div
+        id="showResult"
+        style="
+          width: 50%;
+          margin: 20px auto;
+          border: 1px solid #ccc;
+          padding: 15px;
+          border-radius: 5px;
+        "
+      ></div>
+
+      <input type="submit" value="Send" />
+    </form>
+
+    <script src="showInFormationStock.js"></script>
+  </body>
+</html>
