@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación de Placa de Auto</title>
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Validar Placa de Auto</h2>
+    <form id="placaForm">
+      <label for="placa">Ingresa la placa:</label>
+      <input type="text" id="placa" name="placa" placeholder="Ej: ABC-123 o ABC-1234" required>
+      <button type="submit">Validar</button>
+    </form>
+
+    <!-- Mensajes de error/success -->
+    <div id="error-message" class="error" style="display: none;"></div>
+    <div id="success-message" class="success" style="display: none;">¡Placa válida!</div>
+    <div id="result" class="result" style="display: none;"></div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="js/calculate.js"></script>
+
+</body>
+</html>
