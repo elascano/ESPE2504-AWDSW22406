@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projector Rental Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h2 class="title">Projector Rental Calculator</h2>
+  <form action="calculate_payment.php" method="POST" id="rentalForm">
+    <label for="type">Projector type:</label>
+    <select name="type" id="type" required>
+      <option value="hd" data-rate="10">HD ($10/hr)</option>
+      <option value="fullhd" data-rate="15">Full HD ($15/hr)</option>
+      <option value="4k" data-rate="20">4K ($20/hr)</option>
+    </select>
+
+    <label for="hours">Rental duration (hours):</label>
+    <input type="number" name="hours" id="hours" min="1" value="1" required />
+
+    <label for="quantity">Number of projectors:</label>
+    <input type="number" name="quantity" id="quantity" min="1" value="1" required />
+
+    <label for="extra_hours">Extra equipment rental hours:</label>
+    <input type="number" name="extra_hours" id="extra_hours" min="0" value="0" required />
+
+    <p><strong>Extra equipment rate:</strong> $5/hour</p>
+
+    <p id="totalPrice">Total estimated price: $0.00</p>
+
+    <button type="submit">Submit Rental</button>
+  </form>
+</body>
+</html>
