@@ -15,16 +15,55 @@ html, body {
     flex-direction: column;
 }
 
-nav {
+
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #000000;
     padding: 15px 30px;
     color: #ffffff;
-    letter-spacing: 4px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 20px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    height: 50px;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:active {
+    transform: scale(0.95);
 }
 
 .container{
@@ -46,18 +85,6 @@ form {
     width: fit-content;
 }
 
-.verified_container{
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 25px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    width: fit-content;
-    text-align: center;
-}
-
 .element {
     margin-bottom: 20px;
 }
@@ -66,14 +93,14 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #555;
+    color: #000000;
     letter-spacing: 3px;
 }
 
 .element input{
     width: 400px;
     height: 25px;
-    border: px solid black;
+    border: 2px solid rgb(39, 39, 39);
     border-radius: 5px;
 }
 
@@ -122,7 +149,15 @@ footer{
 
 .msg{
     display: flex;
-    font-size: 12px;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
     padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.notification{
+    display: flex;
+    text-align: left;
+    padding: 5px;  
 }

@@ -15,16 +15,63 @@ html, body {
     flex-direction: column;
 }
 
-nav {
+
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #000000;
     padding: 15px 30px;
     color: #ffffff;
-    letter-spacing: 4px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 20px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    height: 50px;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:active {
+    transform: scale(0.95);
+}
+
+h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -33,6 +80,7 @@ nav {
     height: fit-content;
     padding: 20px;
     flex: 1;
+    flex-direction: column;
 }
 
 form {
@@ -54,14 +102,14 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #555;
+    color: #000000;
     letter-spacing: 3px;
 }
 
 .element input{
     width: 400px;
     height: 25px;
-    border: px solid black;
+    border: 2px solid rgb(39, 39, 39);
     border-radius: 5px;
 }
 
@@ -70,6 +118,7 @@ label {
     justify-content: center;
     margin-top: 20px;
 }
+
 .btn input[type="submit"]{
     background-color: #b9b9ff;
     border: 2px solid #1e1e2f;
@@ -94,8 +143,12 @@ p{
     text-align: center;
 }
 
-.register_link a{
+.back{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 0px 0px;
 }
 
 footer{
@@ -110,7 +163,15 @@ footer{
 
 .msg{
     display: flex;
-    font-size: 12px;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
     padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.notification{
+    display: flex;
+    text-align: left;
+    padding: 5px;  
 }
