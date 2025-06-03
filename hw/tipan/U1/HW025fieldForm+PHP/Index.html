@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Registration</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Flight Registration Form</h1>
+  </header>
+
+  <section class="registrationSection">
+    <form action="saveFlight.php" method="post" class="form1">
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              <label for="flightNumber">Flight Number:</label>
+              <input type="text" id="flightNumber" name="flightNumber" required>
+            </th>
+            <th>
+              <label for="airline">Airline:</label>
+              <input type="text" id="airline" name="airline" required>
+            </th>
+            <th>
+              <label for="status">Status:</label>
+              <select id="status" name="status" required>
+                <option value="scheduled">Scheduled</option>
+                <option value="in_flight">In Flight</option>
+                <option value="landed">Landed</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </th>
+            <th>
+              <label for="pilotName">Pilot Name:</label>
+              <input type="text" id="pilotName" name="pilotName">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <label for="origin">Origin City:</label>
+              <input type="text" id="origin" name="origin" required>
+            </th>
+            <th>
+              <label for="departureDate">Departure Date:</label>
+              <input type="date" id="departureDate" name="departureDate" required>
+            </th>
+            <th>
+              <label for="departureTime">Departure Time:</label>
+              <input type="time" id="departureTime" name="departureTime" required>
+            </th>
+            <th>
+              <label for="pilotLicense">Pilot License No.:</label>
+              <input type="text" id="pilotLicense" name="pilotLicense">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <label for="destination">Destination City:</label>
+              <input type="text" id="destination" name="destination" required>
+            </th>
+            <th>
+              <label for="arrivalDate">Arrival Date:</label>
+              <input type="date" id="arrivalDate" name="arrivalDate" required>
+            </th>
+            <th>
+              <label for="arrivalTime">Arrival Time:</label>
+              <input type="time" id="arrivalTime" name="arrivalTime" required>
+            </th>
+            <th rowspan="2">
+              <label>Amenities:</label>
+              <div class="amenitiesBoxes">
+                <label for="wifi">Wi-Fi</label>
+                <input type="checkbox" id="wifi" name="amenities[]" value="wifi">
+              </div>
+              <div class="amenitiesBoxes">
+                <label for="entertainment">Entertainment</label>
+                <input type="checkbox" id="entertainment" name="amenities[]" value="entertainment">
+              </div>
+              <div class="amenitiesBoxes">
+                <label for="firstClass">First Class</label>
+                <input type="checkbox" id="firstClass" name="amenities[]" value="first_class">
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <label for="aircraftReg">Aircraft Registration:</label>
+              <input type="text" id="aircraftReg" name="aircraftReg" required>
+            </th>
+            <th>
+              <label for="aircraftModel">Aircraft Model:</label>
+              <input type="text" id="aircraftModel" name="aircraftModel">
+            </th>
+            <th>
+              <label for="aircraftMaker">Aircraft Manufacturer:</label>
+              <input type="text" id="aircraftMaker" name="aircraftMaker">
+            </th>
+          </tr>
+          <tr>
+            <td colspan="4" style="text-align:center;">
+              <button type="submit">Register Flight</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </section>
+
+</body>
+
+</html>

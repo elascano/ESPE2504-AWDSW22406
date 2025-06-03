@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    height: 80px;
+    box-shadow: 0 0 10px 5px rgb(217, 217, 217);
+    background-color: rgb(144, 155, 201);
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+}
+
+.registrationSection{
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+.form1{
+    background-color: white;
+    height: auto;
+    display: flex;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-spacing: 4px;
+}
+
+th {
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button{
+    width: 150px;
+    padding: 15px 0px;
+    font-size: 1rem;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f51b5;
+}
+
+.amenitiesBoxes{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+.amenitiesBoxes > label{
+    width: 200px;
+    text-align: start;
+}
+
+.amenitiesBoxes > input{
+    width: 20px;
+}
