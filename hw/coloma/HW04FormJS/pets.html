@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Food Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Pet Food Calculator</h2>
+  <form id="petForm">
+    <label>Pet Name:
+      <input type="text" id="petName" required>
+    </label>
+
+    <label>Pet Type:
+      <select id="petType" required>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="rabbit">Rabbit</option>
+      </select>
+    </label>
+
+    <label>Weight (kg):
+      <input type="number" id="weight" step="0.1" required>
+    </label>
+
+    <button type="button" onclick="calculateFood()">Calculate Food</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateFood() {
+      const petName = document.getElementById("petName").value;
+      const petType = document.getElementById("petType").value;
+      const weight = parseFloat(document.getElementById("weight").value);
+
+      let factor;
+      switch(petType) {
+        case "dog": factor = 30; break;
+        case "cat": factor = 25; break;
+        case "rabbit": factor = 15; break;
+        default: factor = 0;
+      }
+
+      const foodGrams = weight * factor;
+      document.getElementById("result").textContent =
+        `${petName} needs approximately ${foodGrams.toFixed(1)}g of food per day.`;
+    }
+  </script>
+</body>
+</html>
