@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+.colors{
+    background-color: limegreen;
+}
+
+.login{
+    background-color: white;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+}
+
+#txtLogin, #txtPassword{ 
+    margin: auto;
+}
+
+h1, p{
+    color: white;
+}
+/*
+--Tiene almenos 4 bloques
+*/

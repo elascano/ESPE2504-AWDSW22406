@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Register</title>
+
+</head>
+<body>
+    <h1 style="text-align: center;">COMPUTER REGISTRATOR</h1>
+    <hr size="10">
+    <form name="frmComputer" action="php/register.php" method="post">
+    <table style="justify-self: center;">
+        <tr>
+            <td>Type Computer:</td>
+            <td><input type="text" name="txtTypeComputer" id="txtTypeComputer"></td>
+
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Capacity Ram (GB):</td>
+            <td><input type="number" name="txtCapacityRam" id="txtCapacityRam" max="1001"></td>
+        </tr>
+        <tr>
+            <td>Brand:</td>
+            <td><input type="text" name="txtBrand" id="txtBrand"></td>
+
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSD:</td>
+            <td>
+            <input type="radio" name="rdSSD" value="True">True
+            <input type="radio" name="rdSSD" value="False">False
+            </td>
+        </tr>
+        <tr>
+            <td>Number Process:</td>
+            <td><input type="number" name="txtNumberProcess" id="txtNumberProcess" max="11"></td>
+
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDD:</td>
+            <td>
+            <input type="radio" name="rdHDD" value="True">True
+            <input type="radio" name="rdHDD" value="False">False
+            </td>
+        </tr>
+        <tr>
+            <td>Height Computer (cm):</td>
+            <td><input type="number" name="txtHeight" id="txtHeight" max="101"></td>
+
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System Operative:</td>
+            <td><input type="text" name="txtSO" id="txtSO"></td>
+        </tr>
+        <tr>
+            <td>Weight Computer (cm):</td>
+            <td><input type="number" name="txtWeight" id="txtWeight" max="101"></td>
+        </tr>
+        
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><input type="submit" name="btnAcess" value="Access">
+            </td>
+        </tr>
+        
+    </table>
+    </form>
+
+</body>
+</html>
