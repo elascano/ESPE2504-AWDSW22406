@@ -1,0 +1,46 @@
+
+body {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+h1, h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+.form-label {
+    font-weight: 500;
+}
+.btn-submit {
+    background-color: #2c7746;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 500;
+}
+.btn-submit:hover {
+    background-color: #1f6944;
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+.nav-links li {
+    margin-bottom: 10px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #1bc700;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+hr {
+    margin: 30px 0;
+}

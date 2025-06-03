@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+    <script>
+        function validateForm(event) {
+            const form = document.forms["frmCustomer"];
+            const id = form["customerID"].value.trim();
+            const name = form["customerName"].value.trim();
+            const phone = form["customerPhone"].value.trim();
+            const gender = form["customerGender"].value;
+
+            if (!/^L\d{8}$/.test(id)) {
+                alert("ID must be in the format 'L00000000' (L followed by 8 digits).");
+                event.preventDefault(); return;
+            }
+
+            if (!/^[A-Za-z\s]{3,50}$/.test(name)) {
+                alert("Name must contain only letters and be between 3 to 50 characters.");
+                event.preventDefault(); return;
+            }
+
+            if (!/^\d{8,15}$/.test(phone)) {
+                alert("Phone must contain 8 to 15 digits only.");
+                event.preventDefault(); return;
+            }
+
+            if (!gender) {
+                alert("Please select a gender.");
+                event.preventDefault(); return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center card-header bg-success text-white"   >Customer Registration</h1>
+                <div class="form-container">
+                    <form id="frmCustomer" onsubmit="validateForm(event)" method="POST" action="create.php">
+                        <div class="mb-3">
+                            <label for="customerID" class="form-label">ID</label>
+                            <input type="text" class="form-control" id="customerID" name="customerID" required 
+                                   pattern="L\d{8}" title="Format: L followed by 8 digits. Example: L12345678">
+                            <div class="form-text">Format: L followed by 8 digits (e.g., L12345678)</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="customerName" name="customerName" required 
+                                   pattern="[A-Za-z\s]{3,50}" title="Only letters and spaces, 3 to 50 characters.">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="bornDate" class="form-label">Born Date</label>
+                            <input type="date" class="form-control" id="bornDate" name="bornDate" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="customerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="customerEmail" name="customerEmail" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="customerPhone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="customerPhone" name="customerPhone" required 
+                                   pattern="\d{8,15}" title="Only digits, 8 to 15 characters.">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="customerGender" class="form-label">Gender</label>
+                            <select class="form-select" id="customerGender" name="customerGender" required>
+                                <option value="" disabled selected>Select your gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Manage Section -->
+                <hr>
+                <h2>Manage Customers</h2>
+                <ul class="nav-links">
+                    <li><a href="read.php" class="btn btn-outline-primary">View All Customers</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
