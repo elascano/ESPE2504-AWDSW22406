@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <form method="post" id="eventForm" style="margin: auto; padding: 20px; border: 1px solid #ccc; width: 400px; border-radius: 5px;">
+        <h2 style="text-align: center; color: brown;">Event Registration</h2>
+        <label>Event Name:</label>
+        <input type="text" id="event_name" name="event_name" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Event Date:</label>
+        <input type="date" id="event_date" name="event_date" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Location:</label>
+        <input type="text" id="location" name="location" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Max Attendees:</label>
+        <input type="number" id="max_attendees" name="max_attendees" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Event Type:</label>
+        <select id="event_type" name="event_type" style="width: 100%; margin-bottom: 20px; padding: 5px;">
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+            <option value="webinar">Webinar</option>
+        </select>
+        
+        <label>Organizer Name:</label>
+        <input type="text" id="organizer_name" name="organizer_name" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Organizer Contact:</label>
+        <input type="text" id="organizer_contact" name="organizer_contact" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Event Duration (days):</label>
+        <input type="number" id="event_duration" name="event_duration" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Event Budget:</label>
+        <input type="number" id="event_budget" name="event_budget" step="0.01" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+        
+        <label>Event Status:</label>
+        <select id="event_status" name="event_status" style="width: 100%; margin-bottom: 20px; padding: 5px;">
+            <option value="planned">Planned</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="completed">Completed</option>
+        </select>
+        
+        <input type="submit" name="register_event" value="Register Event" style="width: 100%; padding: 10px; background-color: brown; color: white; border: none; cursor: pointer;">
+   </form>
+
+  
+
+   <script src="../js/validation.js"></script>
+</body>
+</html>
