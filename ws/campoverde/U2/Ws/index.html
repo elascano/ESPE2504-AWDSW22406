@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <form action="php/show.php" method="post" enctype="multipart/form-data">
+    <h2>Phone Form</h2>
+
+    <label for="brand">Brand:</label>
+    <select id="brand" name="brand" required>
+      <option value="">Select a brand</option>
+      <option value="apple">Apple</option>
+      <option value="samsung">Samsung</option>
+      <option value="xiaomi">Xiaomi</option>
+      <option value="motorola">Motorola</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model" required>
+
+    <label>Operating System:</label>
+    <input type="radio" id="android" name="os" value="Android" required>
+    <label for="android" class="inline">Android</label>
+    <input type="radio" id="ios" name="os" value="iOS">
+    <label for="ios" class="inline">iOS</label>
+
+    <label for="storage">Storage:</label>
+    <select id="storage" name="storage">
+      <option value="64">64 GB</option>
+      <option value="128">128 GB</option>
+      <option value="256">256 GB</option>
+      <option value="512">512 GB</option>
+    </select>
+
+    <label>RAM:</label>
+    <input type="radio" id="ram4" name="ram" value="4GB">
+    <label for="ram4" class="inline">4 GB</label>
+    <input type="radio" id="ram6" name="ram" value="6GB">
+    <label for="ram6" class="inline">6 GB</label>
+    <input type="radio" id="ram8" name="ram" value="8GB">
+    <label for="ram8" class="inline">8 GB</label>
+
+    <label for="release_date">Release Date:</label>
+    <input type="date" id="release_date" name="release_date">
+
+    <label for="color">Available Colors:</label>
+    <input type="checkbox" id="color_black" name="color[]" value="Black">
+    <label for="color_black" class="inline">Black</label>
+    <input type="checkbox" id="color_white" name="color[]" value="White">
+    <label for="color_white" class="inline">White</label>
+    <input type="checkbox" id="color_blue" name="color[]" value="Blue">
+    <label for="color_blue" class="inline">Blue</label>
+
+    <label for="price">Estimated Price ($):</label>
+    <input type="number" id="price" name="price" min="0" step="0.01">
+
+    <label for="availability">Availability:</label>
+    <select id="availability" name="availability">
+      <option value="available">Available</option>
+      <option value="unavailable">Unavailable</option>
+      <option value="preorder">Pre-order</option>
+    </select>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4"></textarea>
+
+    <label for="photo">Upload phone image:</label>
+    <input type="file" id="photo" name="photo">
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
