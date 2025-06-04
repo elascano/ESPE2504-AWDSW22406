@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professor Management</title>
+    <link rel="stylesheet" href="css/styleindex.css">
+</head>
+<body>
+    <h1>Professor Management System</h1>
+
+    <!-- Form to insert a new professor -->
+    <h2>Add New Professor</h2>
+    <form id="form-insertar" action="php/insertar_profesor.php" method="POST">
+        First Name: <input type="text" name="nombre" required>
+        Last Name: <input type="text" name="apellido" required>
+        Department: <input type="text" name="departamento" required>
+        Years of Experience: <input type="number" name="años_experiencia" required>
+        Base Salary: <input type="number" name="salario_base" required>
+        Publications: <input type="number" name="nro_publicaciones" required>
+        <input type="submit" value="Add Professor">
+    </form>
+
+    <!-- Filter by department -->
+    <h2>View Professors</h2>
+    <form method="GET" action="php/leer_profesores.php">
+        Filter by department:
+        <input type="text" name="departamento">
+        <input type="submit" value="Filter">
+    </form>
+
+    <!-- Professors table (loaded dynamically) -->
+    <div id="tabla-profesores">
+        <!-- Table will be loaded here via AJAX -->
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
