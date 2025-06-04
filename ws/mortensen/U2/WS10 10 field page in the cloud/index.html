@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banking Form - GET</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 min-h-screen flex items-center justify-center">
+  <form action="/thankyou.html" method="GET" class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl">
+    <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">Banking Form</h2>
+    
+    <label class="block mb-2 text-gray-700">Full Name</label>
+    <input type="text" name="fullname" class="w-full mb-4 border px-3 py-2 rounded" required />
+
+    <label class="block mb-2 text-gray-700">Email</label>
+    <input type="email" name="email" class="w-full mb-4 border px-3 py-2 rounded" required />
+
+    <label class="block mb-2 text-gray-700">ID Number</label>
+    <input type="text" name="id" class="w-full mb-4 border px-3 py-2 rounded" maxlength="10" />
+
+    <label class="block mb-2 text-gray-700">Phone</label>
+    <input type="tel" name="phone" class="w-full mb-4 border px-3 py-2 rounded" />
+
+    <label class="block mb-2 text-gray-700">Date of Birth</label>
+    <input type="date" name="birthdate" class="w-full mb-4 border px-3 py-2 rounded" />
+
+    <label class="block mb-2 text-gray-700">Account Type</label>
+    <select name="account" class="w-full mb-4 border px-3 py-2 rounded">
+      <option>Savings</option>
+      <option>Checking</option>
+    </select>
+
+    <label class="block mb-2 text-gray-700">Monthly Income</label>
+    <input type="number" name="income" class="w-full mb-4 border px-3 py-2 rounded" />
+
+    <label class="block mb-2 text-gray-700">Address</label>
+    <textarea name="address" class="w-full mb-4 border px-3 py-2 rounded"></textarea>
+
+    <label class="block mb-2 text-gray-700">File Upload</label>
+    <input type="file" disabled class="w-full mb-4 border px-3 py-2 rounded bg-gray-100 cursor-not-allowed" />
+
+    <label class="inline-flex items-center mb-4">
+      <input type="checkbox" name="terms" class="mr-2" /> I accept the terms
+    </label>
+
+    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Submit</button>
+  </form>
+</body>
+</html>
