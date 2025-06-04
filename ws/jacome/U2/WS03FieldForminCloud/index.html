@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Register New University</h1>
+    <hr size="10">
+    <form action="#" method="GET">
+        <table>
+            <tr>
+                <td>University Name:</td>
+                <td><input type="text" name="name" id="name" required></td>
+            </tr>
+            <tr>
+                <td>University Type:</td>
+                <td>
+                    <input type="radio" name="UniversityType" value="public" required> Public
+                    <input type="radio" name="UniversityType" value="private" required> Private
+                </td>
+            </tr>
+            <tr>
+                <td>University Email:</td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>University Capacity:</td>
+                <td><input type="number" name="capacity" id="capacity" required></td>
+            </tr>
+            <tr>
+                <td>University Phone:</td>
+                <td><input type="tel" name="phone" id="phone" required></td>
+            </tr>
+            <tr>
+                <td>University Website:</td>
+                <td><input type="url" name="website" id="website" required></td>
+            </tr>
+            <tr>
+                <td>University Foundation Date:</td>
+                <td><input type="date" name="foundationDate" id="foundationDate" required></td>
+            </tr>
+            <tr>
+                <td>University Photo:</td>
+                <td><input type="file" name="fileUniversity" id="fileUniversity" required></td>
+            </tr>
+            <tr>
+                <td>Additional Services:</td>
+                <td>
+                    <input type="checkbox" name="services" value="sportsFacilities"> Sports Facilities
+                    <input type="checkbox" name="services" value="hostel"> Hostel
+                    <input type="checkbox" name="services" value="library"> Library
+                </td>
+            </tr>
+            <tr>
+                <td>Main University Color:</td>
+                <td><input type="color" name="mainColor" id="mainColor" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Register University">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
