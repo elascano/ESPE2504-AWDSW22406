@@ -1,0 +1,61 @@
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 0.7fr;
+    grid-template-rows: 0.7fr 4.8fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+  
+  .header { grid-area: header; 
+    background-color: rgb(28, 28, 28);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+  
+  .main { grid-area: main; 
+    background-color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+
+.formspace{
+    width: 30%;
+    position: relative;
+    top: 25%;
+    margin: auto;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    border-radius: 7px;
+    text-align: left;
+}
+input{
+    width: 80%;
+}
+.buttonSpace
+{
+    text-align: center;
+}
+#sendBtn
+{
+    background-color: coral;
+    color: darkred;
+    width: auto;
+    border-radius: 3px;
+    border: none;
+}
+
+.footer { 
+    font-family: Arial, Helvetica, sans-serif;
+    grid-area: footer; 
+    background-color: black;
+    color: white;
+    text-align: center;
+}

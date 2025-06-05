@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+        <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <p>
+                        <h1>Student Registration</h1></p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="formspace">
+                        <form id="studentRegisterForm" name="studentRegisterForm" method="get">
+                            <br/>
+                            <p>
+                                <label>Full name and lastname</label>
+                                <input type="text" id="studentName" name="studentName">
+                            </p>
+                            <p>
+                                <label>Birth Date:</label>
+                                <input type="date" id="studentBirthDate" name="studentBirthDate">
+                            </p>
+                            <p>
+                                Gender:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="studentGender">Female</label><input type="radio" id="studentGender" name="studentGender">
+                                        </td>
+                                        <td>
+                                            <label for="studentGender">Male</label><input type="radio" id="studentGender" name="studentGender">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </p>
+                            <p>
+                                <label>Student Email</label>
+                                <input type="mail" id="studentMail" name="studentMail">
+                            </p>
+                            <hr/>
+                            <h3>Medical Information</h3>
+                            <p>
+                                <label>Blood Type:</label>
+                                <select id="bloodType" name="bloodType">
+                                    <option value=""></option>
+                                    <option value="a+">A+</option>
+                                    <option value="a-">A-</option>
+                                    <option value="b+">B+</option>
+                                    <option value="b-">B-</option>
+                                    <option value="o+">O+</option>
+                                    <option value="o-">O-</option>
+                                    <option value="ab+">AB+</option>
+                                    <option value="ab-">AB-</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Height</label>
+                                <input type="number" id="studentHeight" size="4" step="0.01" name="studentHeight">(m)
+                            </p>
+                            <p>
+                                <label>Weight</label>
+                                <input type="number" id="studentWeight" size="4" step="0.1" name="studentWeight">(lb)
+                            </p>
+                            <p>
+                                <label>Additional observations:</label>
+                                <br>
+                                <textarea id="medicalObservations" name="medicalObservations"></textarea>
+                            </p>
+                            <hr/>
+                            <h3>Contact Information</h3>
+                            <p>
+                                <label>Emergency Contact Name:</label>
+                                <input type="text" id="emergencyContact" name="emergencyContact">
+                            </p>
+                            <p>
+                                <label>Emergency Contact Phone:</label>
+                                <input type="text" id="emergencyContactPhone" name="emergencyContactPhone">
+                            </p>
+                            <p>
+                                <label>Emergency Contact Email:</label>
+                                <input type="text" id="emergencyContactEmail" name="text" id="emergencyContactEmail">
+                            </p>
+                            <div class="buttonSpace">
+                                <input type="submit" value="Send" class="formButton" id="sendBtn"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>MADE BY: <B>Marcelo Pareja 2025</B></p>
+                </div>
+            </div>
+    </body>
+</body>
+</html>
