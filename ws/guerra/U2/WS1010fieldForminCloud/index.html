@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS10</title>
+    <link rel="stylesheet" href="CSS/styleHome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <section class="navbar-left">
+                <img src="./Images/fifaLogo.jpg" alt="Logo" class="logo">
+            </section>
+            <section class="navbar-center">
+                <h1 class="nav-title">Football Team Evaluation Form</h1>
+            </section>
+            <section class="navbar-right">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./index.html" class="nav-link">Evaluation Form</a>
+            </section>
+        </nav>
+    </header>
+
+    <section class="container">
+        <form name="registerform" id="registerform" method="GET" action="">
+
+            <section class="element">
+                <label for="team_name">Team Name:</label>
+                <input type="text" id="team_name" name="team_name" required class="input" placeholder="Enter team name">
+            </section>
+
+            <section class="element">
+                <label for="league">League Type:</label>
+                <select id="league" name="league" required class="select">
+                    <option value="">--Select--</option>
+                    <option value="national">National League</option>
+                    <option value="international">International Club</option>
+                    <option value="youth">Youth Academy</option>
+                    <option value="national_team">National Team</option>
+                </select>
+            </section>
+
+            <section class="element">
+                <label for="avg_age">Average Player Age:</label>
+                <input type="number" id="avg_age" name="avg_age" min="15" max="45" class="input" placeholder="Enter average age" required>
+            </section>
+
+            <section class="element">
+                <div class="radio-container">
+                    <label for="formation">Preferred Formation System: (Select One)</label>
+                    <div class="radio-group">
+                        <div class="radio-element">
+                        <input type="radio" id="442" name="formation" value="4-4-2" required class="radio">
+                        <label for="442">4-4-2</label>
+                        </div>
+                        <div class="radio-element">
+                        <input type="radio" id="433" name="formation" value="4-3-3" class="radio">
+                        <label for="433">4-3-3</label>
+                        </div>
+                        <div class="radio-element">
+                        <input type="radio" id="352" name="formation" value="3-5-2" class="radio">
+                        <label for="352">3-5-2</label>
+                        </div>
+                    </div>
+                </div>
+            </section><br>
+
+            <section class="element">
+                <div class="checkbox-container">
+                    <label for="tactics">Tactical Style (select all that apply):</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-element">
+                        <input type="checkbox" id="counter" name="tactics" value="Counter-Attack" class="checkbox">
+                        <label for="counter">Counter-Attack</label>
+                        </div>
+                        <div class="checkbox-element">
+                            <input type="checkbox" id="possession" name="tactics" value="Possession-Based" class="checkbox">
+                            <label for="possession">Possession-Based</label>
+                        </div>
+                        <div class="checkbox-element">
+                            <input type="checkbox" id="highpress" name="tactics" value="High Pressing" class="checkbox">
+                            <label for="highpress">High Pressing</label>
+                        </div>
+                        <div class="checkbox-element">
+                            <input type="checkbox" id="longball" name="tactics" value="Long Ball" class="checkbox">
+                            <label for="longball">Long Ball</label>
+                        </div>
+                    </div>
+                </div>
+            </section><br>
+
+            <section class="element">
+                <label for="budget">Team Annual Budget (in millions):</label>
+                <input type="range" id="budget" name="budget" min="1" max="500" step="1" oninput="document.getElementById('budgetValue').innerText = this.value + 'M'" class="range" required>
+                <span id="budgetValue">250M</span>
+            </section><br>
+
+            <section class="element">
+                <label for="stadium">Home Stadium Name:</label>
+                <input type="text" id="stadium" name="stadium" class="input" placeholder="Enter stadium name" required class="input">
+            </section><br>
+
+            <section class="element">
+                <label for="titles">Number of Titles Won:</label>
+                <input type="number" id="titles" name="titles" min="0" class="input" placeholder="Enter number of titles won" required>
+            </section><br>
+
+            <section class="element">
+                <label for="analysis">Brief Analysis (Strengths & Weaknesses):</label>
+                <div class="textarea-container">
+                    <textarea id="analysis" name="analysis" rows="4" class="textarea" placeholder="Example: Strong midfield, weak defense, relies on counter-attacks..."></textarea>
+                </div>
+            </section>
+
+    
+            <section class="btn">
+                <input type="submit" name="Submit" id="Submit" value="Submit">
+            </section>
+        </form>
+    </section>
+
+    <section id="view_values"></section>
+    
+    <footer>
+        Developed by: Diana Guerra
+    </footer>
+</body>
+</html>

@@ -1,0 +1,360 @@
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0px;
+}
+
+body {
+    background-image: url(../Images/background.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 15px 30px;
+    color: #ffffff;
+    height: 60px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+}
+
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.nav-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:active {
+    transform: scale(0.95);
+}
+
+.logo{
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding: 20px;
+    flex: 1;
+}
+
+form {
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.element {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.input{
+    width: 100%;
+    height: 25px;
+    border: 2px solid rgb(39, 39, 39);
+    border-radius: 5px;
+}
+
+.input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.select{
+    width: 100%;
+    height: 30px;
+    border: 2px solid rgb(39, 39, 39);
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.radio-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.radio-group {
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.radio-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.radio-element label {
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-element:hover {
+    border: 2px solid #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.8);
+}
+
+.radio{
+    accent-color: #007bff;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.checkbox {
+  accent-color: #007bff;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.checkbox-group {
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.checkbox-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.checkbox-element label {
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-element:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+}
+
+.checkbox {
+  accent-color: #007bff;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox{
+  accent-color: #007bff;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.checkbox-element:hover{
+    border: 2px solid #007bff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.8);
+}
+
+.range{
+    width: 100%;
+    height: 8px;
+}
+
+.range::-webkit-slider-runnable-track {
+  height: 9px;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+  margin-top: -4px;
+  transition: background 0.3s ease;
+}
+
+#budgetValue {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #292929;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.4s;
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn input[type="submit"]{
+    background-color: #b9b9ff;
+    border: 2px solid #1e1e2f;
+    border-radius: 30px 0px;
+    cursor: pointer;
+    padding: 15px 40px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn input[type="submit"]:hover{
+    transition: transform 0.2s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8);
+    background-color: #2a2a43;
+    color: white;
+}
+
+.btn input[type="submit"]:active {
+    transform: scale(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    color: #d1d1d1;
+}
